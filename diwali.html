@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .diwali {
+            color: rgb(148, 34, 74);
+
+        }
+
+        body {
+            background-color: rgb(160, 225, 243);
+
+        }
+    </style>
+</head>
+
+<body>
+    <h2 class="diwali"> Happy diwali</h2>
+    <div class="diwali-content">
+        <b>Diwali (also: Deepawali)[2] is one of India's biggest festivals. The word 'Deepawali' means rows of lighted
+            lamps. It is a Festival of Lights, and Hindus celebrate it with joy.[3] During this festival, people light
+            up their houses and shops with small cup-shaped oil lamps made of baked clay. They worship the Lord Ganesha
+            and Goddess Lakshmi for welfare and prosperity. It marks the beginning of a new year. People clean and
+            decorate their houses before the festival. They make colorful rangoli art on floors with colourful rice and
+            flowers</b>
+
+    </div>
+    <div clss="gallary">
+        <img src=" https://tse1.mm.bing.net/th?id=OIP.QHFKCqQcneozsCQ9IDZLvgHaH_&pid=Api&P=0&h=180" alt=" ">
+        <img src=" https://tse3.mm.bing.net/th?id=OIP.jFU1eQdnykG2OVx8AqnPcAHaE6&pid=Api&P=0&h=180" alt=" ">
+        <img src="https://tse1.mm.bing.net/th?id=OIP.CI-YGyMoUJ4strO4VFL2GQHaEK&pid=Api&P=0&h=180 " alt=" ">
+        <img src="https://tse2.mm.bing.net/th?id=OIP.08RmPT8XHQUycfKaInQRaAHaEH&pid=Api&P=0&h=180 " alt=" ">
+    </div>
+    <script>
+        function launchConfetti() {
+            const duration = 7 * 1000; // 10 seconds
+            const end = Date.now() + duration;
+            const colors = ['#ffeb3b', '#8F00FF', '#ff5722', '#4caf50', '#FFFFFF', "#000000"];
+            (function frame() {
+                confetti({
+                    particleCount: 6, // Reduced number of particles
+                    startVelocity: 80,
+                    spread: 450,
+                    ticks: 190,
+                    origin: { x: 0.5, y: 0.5 }, // Start from top center
+                    colors: colors,
+                });
+                if (Date.now() < end) {
+                    requestAnimationFrame(frame);
+                }
+            }());
+        }
+        window.onload = function () {
+            launchConfetti();
+        }
+    </script>
+</body>
+
+</html>
